@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C09D046208C342100B8A21F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C09D045208C342100B8A21F /* LoginViewController.swift */; };
 		0CB97478208C222800D915D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB97477208C222800D915D8 /* AppDelegate.swift */; };
 		0CB9747A208C222800D915D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB97479208C222800D915D8 /* ViewController.swift */; };
 		0CB9747D208C222800D915D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CB9747B208C222800D915D8 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C09D045208C342100B8A21F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0CB97474208C222800D915D8 /* Concert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB97477208C222800D915D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CB97479208C222800D915D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				0CB97477208C222800D915D8 /* AppDelegate.swift */,
+				0C09D045208C342100B8A21F /* LoginViewController.swift */,
 				0CB97479208C222800D915D8 /* ViewController.swift */,
 				0CB9747B208C222800D915D8 /* Main.storyboard */,
 				0CB97481208C222800D915D8 /* Assets.xcassets */,
@@ -467,6 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C09D046208C342100B8A21F /* LoginViewController.swift in Sources */,
 				0CB97480208C222800D915D8 /* Concert.xcdatamodeld in Sources */,
 				0CB9747A208C222800D915D8 /* ViewController.swift in Sources */,
 				0CB97478208C222800D915D8 /* AppDelegate.swift in Sources */,
