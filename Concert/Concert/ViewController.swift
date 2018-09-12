@@ -80,16 +80,21 @@ class ViewController: UIViewController {
             "Accept": "application/json",
             "Content-Type": "application/json",
             "Authorization": "Bearer " + authToken!
-            
         ]
         
-        Alamofire.request("https://api.spotify.com/v1/me", headers: headers).responseJSON { response in
-            if((response.result.value) != nil) {
-                let swiftyJsonVar = JSON(response.result.value!)
-                self.nameOfUser = swiftyJsonVar["display_name"].string!
-                print("*", self.nameOfUser as String!)
+        let queue = DispatchQueue(label: "com.cnoon.response-queue", qos: .utility, attributes: [.concurrent])
+        Alamofire.request("https://api.spotify.com/v1/me", headers: headers)
+        .response(
+            queue: queue,
+            responseSerializer: DataRequest.jsonResponseSerializer(),
+            completionHandler: { response in
+                if((response.result.value) != nil) {
+                    let swiftyJsonVar = JSON(response.result.value!)
+                    self.nameOfUser = swiftyJsonVar["display_name"].string!
+                    print("*", self.nameOfUser as String!)
+                }
             }
-        }
+        )
     }
     
     /**
@@ -102,13 +107,19 @@ class ViewController: UIViewController {
             "Authorization": "Bearer " + authToken!
         ]
         
-        Alamofire.request("https://api.spotify.com/v1/me", headers: headers).responseJSON { response in
-            if((response.result.value) != nil) {
-                let swiftyJsonVar = JSON(response.result.value!)
-                self.userId = swiftyJsonVar["id"].string!
-                print("*", self.userId as String!)
+        let queue = DispatchQueue(label: "com.cnoon.response-queue", qos: .utility, attributes: [.concurrent])
+        Alamofire.request("https://api.spotify.com/v1/me", headers: headers)
+        .response(
+            queue: queue,
+            responseSerializer: DataRequest.jsonResponseSerializer(),
+            completionHandler: { response in
+                if((response.result.value) != nil) {
+                    let swiftyJsonVar = JSON(response.result.value!)
+                    self.userId = swiftyJsonVar["id"].string!
+                    print("*", self.userId as String!)
+                }
             }
-        }
+        )
     }
     
     func makeNewPlaylist(name: String) {
